@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class NoteServiceImpl implements NoteService {
-    private NoteRepo noteRepo;
+    private final NoteRepo noteRepo;
 
     @Autowired
     public NoteServiceImpl(NoteRepo noteRepo) {
@@ -18,6 +18,6 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public List<Note> getAllNotes() {
-        return null;
+        return noteRepo.findAll();
     }
 }
