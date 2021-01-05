@@ -10,10 +10,10 @@
     <title>Notes</title>
 </head>
 
-<body>
+<body style="background-color: darkgray">
 <!-- Add note -->
-<button type="button" class="mx-4 mt-3 mb-2 btn btn-primary" data-toggle="modal" data-target="#addModal" id="toggleAddModal">Add
-    new note
+<button type="button" class="mx-4 mt-3 mb-2 btn btn-primary" data-toggle="modal" data-target="#addModal"
+        id="toggleAddModal">Add new note
 </button>
 
 <!-- Show notes -->
@@ -21,9 +21,7 @@
     <div class="col-lg-3 col-md-3 mb-3" th:each="note:${notes}">
         <div class="card text-white bg-dark mb-3" style="max-width: 300px">
             <div class="card-body">
-                <h4 class="card-title">
-                    <a href="#" th:text="${note.getTitle()}"></a>
-                </h4>
+                <h4 class="card-title" th:text="${note.getTitle()}"></h4>
                 <p class="card-text" th:text="${note.getContent()}" style="height: 300px; overflow-y: scroll;"></p>
                 <a th:href="@{/get-note-by-id/(id=${note.getId()})}" class="btn btn-warning editButton"
                    id="toggleEditModal">Edit</a>
@@ -43,54 +41,31 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalCenterTitle">Add car</h5>
+                    <h5 class="modal-title" id="addModalCenterTitle">Add note</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="markAddCar" class="col-form-label">Mark</label>
-                        <input type="text" class="form-control" id="markAddCar" placeholder="Mark" name="mark">
-                        <p id="markAddMessage" style="color: red;">
-                            **Mark is missing
+                        <label for="titleAddNote" class="col-form-label">Title</label>
+                        <input type="text" class="form-control" id="titleAddNote" placeholder="Title" name="title">
+                        <p id="titleAddNoteMessage" style="color: red;">
+                            **Title is missing
                         </p>
                     </div>
                     <div class="form-group">
-                        <label for="modelAddCar" class="col-form-label">Model</label>
-                        <input type="text" class="form-control" id="modelAddCar" placeholder="Model"
-                               name="model">
-                        <p id="modelAddMessage" style="color: red;">
-                            **Model is missing
-                        </p>
-                    </div>
-                    <div class="form-group">
-                        <label for="colorAdd" class="col-form-label">Color:</label>
-                        <select class="form-control" id="colorAdd" name="color">
-                            <option value="RED">Red</option>
-                            <option value="GREEN">Green</option>
-                            <option value="BLUE">Blue</option>
-                            <option value="WHITE">White</option>
-                            <option value="BLACK">Black</option>
-                            <option value="YELLOW">Yellow</option>
-                            <option value="ORANGE">Orange</option>
-                            <option value="BROWN">Brown</option>
-                            <option value="GREY">Grey</option>
-                            <option value="UNKNOWN">Unknown</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dateAddCar" class="col-form-label">Production date</label>
-                        <input type="text" class="form-control" id="dateAddCar" placeholder="yyyy-MM-dd"
-                               name="productionDate">
-                        <p id="dateAddMessage" style="color: red;">
-                            **Production date is missing
+                        <label for="contentAddNote" class="col-form-label">Content</label>
+                        <textarea class="form-control" id="contentAddNote" placeholder="Content"
+                                  name="content"></textarea>
+                        <p id="contentAddNoteMessage" style="color: red;">
+                            **Content is missing
                         </p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="submitAdd">Add new car</button>
+                    <button type="submit" class="btn btn-primary" id="submitAdd">Add new note</button>
                 </div>
             </div>
         </div>
@@ -104,54 +79,29 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="updateModalCenterTitle">Modify car</h5>
+                    <h5 class="modal-title" id="updateModalCenterTitle">Edit note</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="idEdit" class="col-form-label">Id:</label>
-                        <input type="text" class="form-control" id="idEdit" name="id" readonly>
-                        <p id="idEditMessage" style="color: red;">
-                            **Id is missing
+                        <label for="idEditNote" class="col-form-label">Id:</label>
+                        <input type="text" class="form-control" id="idEditNote" name="id" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="titleEditNote" class="col-form-label">Title</label>
+                        <input type="text" class="form-control" id="titleEditNote" placeholder="Title" name="title">
+                        <p id="titleEditNoteMessage" style="color: red;">
+                            **Title is missing
                         </p>
                     </div>
                     <div class="form-group">
-                        <label for="markEdit" class="col-form-label">Mark:</label>
-                        <input type="text" class="form-control" id="markEdit" name="mark">
-                        <p id="markEditMessage" style="color: red;">
-                            **Mark is missing
-                        </p>
-                    </div>
-                    <div class="form-group">
-                        <label for="modelEdit" class="col-form-label">Model:</label>
-                        <input type="text" class="form-control" id="modelEdit" name="model">
-                        <p id="modelEditMessage" style="color: red;">
-                            **Model is missing
-                        </p>
-                    </div>
-                    <div class="form-group">
-                        <label for="colorEdit" class="col-form-label">Color:</label>
-                        <select class="form-control" id="colorEdit" name="color">
-                            <option value="RED">Red</option>
-                            <option value="GREEN">Green</option>
-                            <option value="BLUE">Blue</option>
-                            <option value="WHITE">White</option>
-                            <option value="BLACK">Black</option>
-                            <option value="YELLOW">Yellow</option>
-                            <option value="ORANGE">Orange</option>
-                            <option value="BROWN">Brown</option>
-                            <option value="GREY">Grey</option>
-                            <option value="UNKNOWN">Unknown</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dateEdit" class="col-form-label">Production date</label>
-                        <input type="text" class="form-control" id="dateEdit" placeholder="yyyy-MM-dd"
-                               name="productionDate">
-                        <p id="dateEditMessage" style="color: red;">
-                            **Production date is missing
+                        <label for="contentEditNote" class="col-form-label">Content</label>
+                        <textarea class="form-control" id="contentEditNote" placeholder="Content"
+                                  name="content"></textarea>
+                        <p id="contentEditNoteMessage" style="color: red;">
+                            **Content is missing
                         </p>
                     </div>
                 </div>
@@ -201,8 +151,6 @@
 
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 <script type="text/javascript" th:src="@{/js/validation.js}"></script>
-<script type="text/javascript" th:src="@{/js/validateDate.js}"></script>
-
 </body>
 
 </html>

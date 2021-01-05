@@ -1,5 +1,7 @@
 package pl.pozadr.notes.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -23,13 +25,20 @@ public class Note {
     private String content;
 
     @Column(name = "date")
-    @NotBlank(message = "Date can not be blank.")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
 
     public Note() {
     }
 
     public Note(String title, String content, LocalDate date) {
+        this.title = title;
+        this.content = content;
+        this.date = date;
+    }
+
+    public Note(Long id, String title, String content, LocalDate date) {
+        this.id = id;
         this.title = title;
         this.content = content;
         this.date = date;

@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 import pl.pozadr.notes.model.Note;
 import pl.pozadr.notes.repository.NoteRepo;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class NoteServiceImpl implements NoteService {
@@ -22,7 +24,32 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
+    public Note getNoteById(Long id) {
+        try {
+            Optional<Note> noteById = noteRepo.findById(id);
+            if (noteById.isPresent())
+                return noteById.get();
+
+        } catch (EntityNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return new Note();
+    }
+
+    @Override
+    public void editNote(Note editedNote) {
+        noteRepo.updateNoteById(editedNote.getId(), editedNote.getTitle(), editedNote.getContent(),
+                editedNote.getDate());
+    }
+
+    @Override
     public void deleteNote(Long id) {
         noteRepo.deleteById(id);
+    }
+
+    @Override
+    public void saveNote(Note newNote) {
+        noteRepo.flush();
+        noteRepo.save(newNote);
     }
 }
