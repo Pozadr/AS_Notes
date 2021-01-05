@@ -20,4 +20,9 @@ public class NoteServiceImpl implements NoteService {
     public List<Note> getAllNotes() {
         return noteRepo.findAll();
     }
+
+    @Override
+    public void deleteNote(Long id) {
+        noteRepo.deleteById(id);
+    }
 }

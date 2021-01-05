@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface NoteService {
     List<Note> getAllNotes();
+    void deleteNote(Long id);
 }

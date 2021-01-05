@@ -1,6 +1,7 @@
 package pl.pozadr.notes.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
@@ -14,6 +15,7 @@ public class Note {
 
     @Column(name = "title", length = 1000)
     @Size(max = 1000, message = "Data input is too long.")
+    @NotBlank(message = "Title can not be blank.")
     private String title;
 
     @Column(name = "content", length = 10000)
@@ -21,6 +23,7 @@ public class Note {
     private String content;
 
     @Column(name = "date")
+    @NotBlank(message = "Date can not be blank.")
     private LocalDate date;
 
     public Note() {

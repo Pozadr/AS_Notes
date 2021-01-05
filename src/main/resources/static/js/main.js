@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.table .editButton').on('click', function (event) {
+    $('.card-body .editButton').on('click', function (event) {
         event.preventDefault();
         var href = $(this).attr('href');
         console.log(href);
@@ -21,7 +21,7 @@ $(document).ready(function () {
         $('#editModal').modal();
     });
 
-    $('.table .deleteButton').on('click', function (event) {
+    $('.card-body .deleteButton').on('click', function (event) {
         event.preventDefault();
         var href = $(this).attr('href');
         $('#deleteModal #idDelete').attr('href', href);
