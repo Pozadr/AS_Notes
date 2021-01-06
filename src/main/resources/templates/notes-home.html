@@ -11,18 +11,20 @@
 </head>
 
 <body style="background-color: darkgray">
+<div class="container">
 <!-- Add note -->
-<button type="button" class="mx-4 mt-3 mb-2 btn btn-primary" data-toggle="modal" data-target="#addModal"
+<button type="button" class="mt-3 mb-2 btn btn-dark" data-toggle="modal" data-target="#addModal"
         id="toggleAddModal">Add new note
 </button>
 
 <!-- Show notes -->
-<div class="mx-2 my-2 row">
-    <div class="col-lg-3 col-md-3 mb-3" th:each="note:${notes}">
-        <div class="card text-white bg-dark mb-3" style="max-width: 300px">
+<div class="row">
+    <div class="col-lg-4 col-md-6 mb-4" th:each="note:${notes}">
+        <div class="card text-white bg-dark mb-3" style="max-width: 400px">
             <div class="card-body">
                 <h4 class="card-title" th:text="${note.getTitle()}"></h4>
-                <p class="card-text" th:text="${note.getContent()}" style="height: 300px; overflow-y: scroll;"></p>
+                <p class="card-text text-justify" th:text="${note.getContent()}" style="height: 300px;
+                overflow-y: scroll; padding-right: 5px;"></p>
                 <a th:href="@{/get-note-by-id/(id=${note.getId()})}" class="btn btn-warning editButton"
                    id="toggleEditModal">Edit</a>
                 <a th:href="@{/delete-note/(id=${note.getId()})}" class="btn btn-danger deleteButton">Delete</a>
@@ -70,6 +72,7 @@
             </div>
         </div>
     </form>
+</div>
 </div>
 
 <!-- MODAL: Edit Note -->

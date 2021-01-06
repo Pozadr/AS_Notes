@@ -1,29 +1,17 @@
 INSERT INTO notes (date, title, content)
-values ('2020-11-11', 'Super Star', 'Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy. ');
+values ('2021-01-01', 'BLACKTIP', 'The -21 Blacktip presents ultra-light, direct handling combined with a generous wind range, a.k.a the ultimate performance sail for the avid wave sailor. Its progressive four batten layout in all sizes provides fingertip control and drive to maneuver in the critical sections of the wave. The large monofilm window gives you superb visibility when lining up your turn. The Blacktip is also available in an extra durable full X-Ply version, the Blacktip Legacy. The new panel layout featuring light-weight Q-Ply in the luff panel, combined with a vertical kevlar load line from top to tack helps to control the profile,  preserving the longevity of the materials while providing a light-weight sail that will stay intact for many seasons to come.');
 
 INSERT INTO notes (date, title, content)
-values ('2021-01-01', 'Second', 'One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy. ');
+values ('2021-01-02', 'ICON', 'The 2021 Icon is defined by its ease of handling utilizing a powerful and direct riding feel. The five batten panel layout gives you complete command in all situations and the confidence to push hard. With five battens to keep the sail draft in forward locked position, the sail works equally well for high-wind jumping environments to powering driving turns in challenging onshore conditions and all wind angles in between. Adaptability is Icon’s signature trait and a big reason it is been so popular for well over a decade. The Icon also provides the ultimate level of stability, in any wind range. This superb stability also means that the Icon is less physically demanding for the rider to use compared to the Blacktip, providing the rider with an absolute focus on maneuvers and going really fast with full control at all times.');
 
 INSERT INTO notes (date, title, content)
-values ('2021-01-02', 'Some title', 'One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. ');
+values ('2020-01-02', 'CORTEX', 'The Cortex will totally change the way you look at an average day. With an extremely short length and a narrow outline with diamond tail configuration, it delivers the best onshore conditions. Combined with a very fast rocker, Cortex is extremely agile and tight turning even when the surf is on. The parallel outline and smooth rail flow keep you in complete control during quick rail to rail transitions. Optimized for both sideshore and onshore real world conditions Cortex delivers snappy turns and quick reactions in the traditional windswell zones and can also be tuned to slice and dice in more side offshore down the line environments. The Cortex may be a new school short board, but it has a long history. The rocker, spiral v and concave profile has its roots in the original Simmer Freewave board. ');
 
 INSERT INTO notes (date, title, content)
-values ('2021-01-04', 'Note title', 'One advanced diverted domestic sex repeated bringing you old.  Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy. ');
+values ('2020-01-04', 'FLYWAVE', 'The Flywave can easily adapt to different turning and riding styles, it can be ridden in hollow sections of small waves with quick aerial rotations, as well as perform in longer drawn out turns in much bigger surf where you need to trust the rails with your life. ');
 
 INSERT INTO notes (date, title, content)
-values ('2020-11-01', 'Last init title', 'One advanced diverted domestic sex repeated bringing you old. Before nature his parish boy. ');
+values ('2020-11-01', 'QUANTUM', 'The 2020 Quantum is designed to perform in all types of wind swell type wave sailing. Although it excels in onshore conditions, it is actually the most versatile wave board in the range, featuring a huge performance register and super easy sailing in any type of wave. Thanks to the five carbon slotboxes you can tune the board for a huge spectrum of conditions, from light wind to high-wind and from onshore to sideshore. Quantum is able to adapt and thrive in any environment.');
 
 INSERT INTO notes (date, title, content)
-values ('2020-11-01', 'Last init title', 'One advanced diverted domestic sex repeated bringing you old. Before nature his parish boy. ');
-
-INSERT INTO notes (date, title, content)
-values ('2020-11-01', 'Last init title', 'One advanced diverted domestic sex repeated bringing you old. Before nature his parish boy. ');
-
-INSERT INTO notes (date, title, content)
-values ('2020-11-01', 'Last init title', 'One advanced diverted domestic sex repeated bringing you old. Before nature his parish boy. ');
-
-INSERT INTO notes (date, title, content)
-values ('2020-11-01', 'Last init title', 'One advanced diverted domestic sex repeated bringing you old. Before nature his parish boy. ');
-
-INSERT INTO notes (date, title, content)
-values ('2020-11-01', 'Last init title', 'One advanced diverted domestic sex repeated bringing you old. Before nature his parish boy. ');
+values ('2020-11-01', 'HELIX', 'The Simmer Helix is a modern freewave board that combines electric high wind freeride performance with the ability for exciting jumping and easy access turning in waves. Anywhere there is wind and water you can use this board to maximize your fun. The new Helix has a completely re-designed outline, with a compact but classic looking nose and a wider curvier rear section that ends in a cut away style v-form. This new outline maximizes a light and nimble straighline feel while also enhancing snappiness in waves, whether in single fin or thruster mode. Since the Helix is such an easy board to sail, it is the perfect choice to get into wave sailing.');
