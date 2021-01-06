@@ -2,7 +2,8 @@
 [*Spring boot 2 academy*](https://www.akademiaspring.pl/)
 
 ## General
-Application to add, show and edit notes. Data is storage in MySQL Database.
+Application to add, show and edit notes. Data is storage in MySQL Database. Date of notes (footer) is updated 
+automatically after adding or editing operation.
 
 ## Endpoints
     http://localhost:8080/notes-home
