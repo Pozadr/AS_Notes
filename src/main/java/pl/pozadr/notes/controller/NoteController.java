@@ -1,6 +1,7 @@
 package pl.pozadr.notes.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.pozadr.notes.model.Note;
 import pl.pozadr.notes.service.NoteService;
 
+import java.util.Optional;
 
 
 @Controller
@@ -27,8 +29,9 @@ public class NoteController {
 
     @GetMapping("/get-note-by-id")
     @ResponseBody
-    public Note getOneNews(Long id) {
-        return noteService.getNoteById(id);
+    public ResponseEntity<Note> getOneNews(Long id) {
+        Optional<Note> noteOpt = noteService.getNoteById(id);
+        return noteOpt.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping("/add-note")

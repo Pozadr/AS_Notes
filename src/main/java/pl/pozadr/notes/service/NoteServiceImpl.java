@@ -25,7 +25,9 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public Note getNoteById(Long id) {
+    public Optional<Note> getNoteById(Long id) {
+        return noteRepo.findById(id);
+        /*
         try {
             Optional<Note> noteById = noteRepo.findById(id);
             if (noteById.isPresent())
@@ -35,6 +37,8 @@ public class NoteServiceImpl implements NoteService {
             System.out.println(ex.getMessage());
         }
         return new Note();
+
+         */
     }
 
     @Override
