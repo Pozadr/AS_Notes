@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import pl.pozadr.notes.model.Note;
 import pl.pozadr.notes.service.NoteService;
 
-import java.time.LocalDate;
 
 
 @Controller
@@ -34,14 +33,13 @@ public class NoteController {
 
     @PostMapping("/add-note")
     public String addCar(@Validated Note newNote) {
-        noteService.saveNote(new Note(newNote.getTitle(), newNote.getContent(), LocalDate.now()));
+        noteService.saveNote(new Note(newNote.getTitle(), newNote.getContent()));
         return "redirect:/notes-home";
     }
 
     @RequestMapping(value = "/edit-note", method = {RequestMethod.PUT, RequestMethod.POST, RequestMethod.GET})
     public String editNote(@Validated Note editedNote) {
-        noteService.editNote(new Note(editedNote.getId(), editedNote.getTitle(), editedNote.getContent(),
-                LocalDate.now()));
+        noteService.editNote(new Note(editedNote.getId(), editedNote.getTitle(), editedNote.getContent()));
         return "redirect:/notes-home";
     }
 

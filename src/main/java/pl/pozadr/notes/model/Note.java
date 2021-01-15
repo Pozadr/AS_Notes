@@ -31,17 +31,15 @@ public class Note {
     public Note() {
     }
 
-    public Note(String title, String content, LocalDate date) {
+    public Note(String title, String content) {
         this.title = title;
         this.content = content;
-        this.date = date;
     }
 
-    public Note(Long id, String title, String content, LocalDate date) {
+    public Note(Long id, String title, String content) {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.date = date;
     }
 
     public Long getId() {

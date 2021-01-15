@@ -6,6 +6,7 @@ import pl.pozadr.notes.model.Note;
 import pl.pozadr.notes.repository.NoteRepo;
 
 import javax.persistence.EntityNotFoundException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +40,7 @@ public class NoteServiceImpl implements NoteService {
     @Override
     public void editNote(Note editedNote) {
         noteRepo.updateNoteById(editedNote.getId(), editedNote.getTitle(), editedNote.getContent(),
-                editedNote.getDate());
+                LocalDate.now());
     }
 
     @Override
@@ -49,6 +50,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public void saveNote(Note newNote) {
+        newNote.setDate(LocalDate.now());
         noteRepo.flush();
         noteRepo.save(newNote);
     }
